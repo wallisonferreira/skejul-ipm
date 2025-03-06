@@ -1,6 +1,10 @@
 <?php
+namespace App\Services;
 
-class Task {
+use App\Core\Database;
+use PDO;
+
+class TaskService {
     private $db;
 
     public function __construct() {
