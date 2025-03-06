@@ -1,0 +1,20 @@
+{
+    "name": "sanfe/skejul-ipm",
+    "description": "A task management application for those who wants to carry their to-dos in only one place.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Sanfe\\SkejulIpm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wallison Ferreira",
+            "email": "sanfer_wallison@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "vlucas/phpdotenv": "^5.6@dev"
+    }
+}
