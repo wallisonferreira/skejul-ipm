@@ -85,22 +85,22 @@ Agora você tem as instruções completas para inicializar e rodar o seu projeto
 
 ## Árvore de diretórios
 
-├───app -> (Backend do projeto em PHP, sob padrão MVC)
-│   ├───Controllers
-│   ├───Core
-│   └───Services
-├───config
-├───frontend -> (Backend do projeto em ReactJS)
-│   ├───node_modules
-│   └───skejul-frontend
-│       ├───node_modules
-│       ├───public
-│       └───src
-│           ├───assets
-│           ├───components
-│           ├───context
-│           ├───pages
-│           └───services
-├───node_modules
-├───public
-└───vendor
+- ├───app -> (Backend do projeto em PHP, sob padrão MVC)
+- │   ├───Controllers
+- │   ├───Core
+- │   └───Services
+- ├───config
+- ├───frontend -> (Backend do projeto em ReactJS)
+- │   ├───node_modules
+- │   └───skejul-frontend
+- │       ├───node_modules
+- │       ├───public
+- │       └───src
+- │           ├───assets
+- │           ├───components
+- │           ├───context
+- │           ├───pages
+- │           └───services
+- ├───node_modules
+- ├───public
+- └───vendor
