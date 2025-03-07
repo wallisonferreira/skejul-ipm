@@ -5,6 +5,11 @@
 - Se em local, **inicializar o Apache** e colocar o projeto sob visibilidade deste servidor, no diretório htdocs ou workbench
 - **Configurar o arquivo .env** com as credenciais do banco de dados
 
+# Configurar as variáveis de ambiente
+```bash
+cp .env.example .env
+```
+
 # **Documentação de Inicialização do Projeto**
 
 Este projeto é composto por um back-end em PHP e um front-end em React. Abaixo estão as instruções detalhadas para iniciar ambos os ambientes de desenvolvimento.

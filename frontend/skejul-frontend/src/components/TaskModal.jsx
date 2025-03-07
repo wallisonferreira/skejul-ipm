@@ -30,7 +30,17 @@ const TaskModal = ({ task, onClose }) => {
                 <h2 className="text-xl font-bold mb-4 text-vivid-red">Editar Tarefa</h2>
                 <form onSubmit={handleSubmit}>
                     <label className="block text-sm font-medium">Título</label>
-                    <input type="text" name="title" value={formData.title} onChange={handleChange} className="w-full p-2 border rounded-md mb-3"/>
+                    <input type="text" 
+                        name="title" 
+                        value={formData.title} 
+                        onChange={handleChange} 
+                        className="
+                            w-full 
+                            p-2 
+                            border 
+                            rounded-md 
+                            mb-3
+                        "/>
 
                     <label className="block text-sm font-medium">Descrição</label>
                     <textarea name="description" value={formData.description} onChange={handleChange} className="w-full p-2 border rounded-md mb-3"></textarea>

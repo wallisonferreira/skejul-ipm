@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -15,10 +13,18 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --black: #121619;
+  --cyan-bluish-gray: #abb8c3;
+  --white: #FFFFFF;
+  --vivid-red: #cf2e2e;
+  --red: #98473E;
+  --yellow: #A37C40;
+  --gray: #6E8894;
 }
 
 body {
-  margin: 0;
+  /* margin: 0; */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -27,16 +33,6 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
-
-:root {
-  --black: #000000;
-  --cyan-bluish-gray: #abb8c3;
-  --white: #ffffff;
-  --pale-pink: #f78da7;
-  --vivid-red: #cf2e2e;
-  --luminous-vivid-orange: #ff6900;
-  --luminous-vivid-amber: #fcb900;
 }
 
 body {
@@ -49,11 +45,28 @@ body {
   color: var(--vivid-red);
 }
 
+
 .bg-vivid-red {
   background-color: var(--vivid-red);
 }
 
 .bg-vivid-red:hover {
   background-color: #a81f1f;
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.text-white {
+  color: var(--white);
 }
 

@@ -35,45 +35,103 @@ const Home = () => {
     return (
         <div className="p-4">
             <h1 className="text-2xl font-bold mb-4 text-vivid-red">Lista de Tarefas</h1>
-            <div className="flex mb-4 gap-2">
+            <div className="flex mb-4 gap-2 justify-center">
                 <input
                     type="text"
                     placeholder="Me lembrar de..."
                     value={newTaskTitle}
                     onChange={(e) => setNewTaskTitle(e.target.value)}
-                    className="border p-2 w-full h-fit rounded-md mb-3"
+                    className="border p-2 w-[700px] h-fit rounded-md mb-3"
                 />
-                <button onClick={handleAddTask} className="bg-blue-600 hover:bg-blue-700 transition-all text-white h-fit rounded-md py-2 px-4 cursor-pointer">Adicionar</button>
+                <button 
+                    onClick={handleAddTask} 
+                    className="
+                        bg-blue-600 
+                        hover:bg-blue-700 
+                        transition-all 
+                        text-white 
+                        h-fit 
+                        rounded-md 
+                        py-2 
+                        px-4 
+                        cursor-pointer
+                    ">Adicionar</button>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {tasks.map((task) => (
-                    <div key={task.id} className="flex flex-col justify-between p-6 bg-white border rounded-lg shadow-sm cursor-pointer">
+                    <div key={task.id} 
+                        className="
+                            flex 
+                            flex-col 
+                            justify-between 
+                            p-6 
+                            bg-blue-800
+                            hover:bg-blue-900 
+                            rounded-lg 
+                            shadow-md
+                            hover:shadow-lg 
+                            cursor-pointer
+                        ">
                         <div>
-                            <h5 className="text-2xl font-semibold text-gray-900">{task.title}</h5>
-                            <p className="text-gray-500">{task.content}</p>
-                            <p className="text-sm text-gray-400">{task.description}</p>
+                            <h5 className="text-2xl font-semibold text-white mb-2">{task.title}</h5>
+                            <p className="text-white">{task.content}</p>
+                            <p className="text-sm text-gray-100">{task.description}</p>
                             <div className="justify-between">
                                 <div className="">
-                                    <p className="text-sm text-gray-400">Finalizar até: {task.end_date}</p>
+                                    <p className="text-sm text-gray-300">Finalizar até: {task.end_date}</p>
                                 </div>
-                                <div className="">
-                                    <p className="text-sm text-gray-500">Status: {task.status}</p>
+                                <div className={
+                                    task.status === 'done' ? 
+                                    'bg-green-600 w-fit py-2 px-4 text-white rounded-md mt-4' : 
+                                    'bg-orange-600 w-fit py-2 px-4 text-white rounded-md mt-4'
+                                }>
+                                    <p className="text-sm text-gray-500">
+                                        <span className="text-white">
+                                            {task.status === 'done' ? 'Concluído' : 'Pendente'}
+                                        </span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <button 
-                            onClick={() => setSelectedTask(task)}
-                            className="mt-3 block w-full text-center text-white bg-slate-700 hover:bg-slate-800 cursor-pointer py-2 px-4 rounded-lg transition-all">
-                            Editar
-                        </button>
-
-                        <button 
-                            onClick={() => setDeleteTask(task)}
-                            className="mt-3 block w-full text-center text-white bg-red-200 hover:bg-red-300 cursor-pointer py-2 px-4 rounded-lg transition-all">
-                            Deletar
-                        </button>
+                        <div className="flex gap-2">
+                            <button 
+                                onClick={() => setSelectedTask(task)}
+                                className="
+                                    mt-3 
+                                    block 
+                                    w-full 
+                                    text-center 
+                                    bg-gray-200 
+                                    hover:bg-gray-400 
+                                    cursor-pointer 
+                                    py-2 
+                                    px-4 
+                                    rounded-md 
+                                    transition-all
+                                ">
+                                Editar
+                            </button>
+                            <button 
+                                onClick={() => setDeleteTask(task)}
+                                className="
+                                    mt-3 
+                                    block 
+                                    w-full 
+                                    text-center 
+                                    text-white 
+                                    bg-red-400/80 
+                                    hover:bg-red-600 
+                                    cursor-pointer 
+                                    py-2 
+                                    px-4 
+                                    rounded-md 
+                                    transition-all
+                                ">
+                                Deletar
+                            </button>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -98,7 +156,7 @@ const Home = () => {
                         />
                         <textarea
                             placeholder="Descrição"
-                            value={taskDetails.content}
+                            value={taskDetails.description}
                             onChange={(e) => setTaskDetails({ ...taskDetails, content: e.target.value })}
                             className="border p-2 w-full mb-2 rounded-xs"
                         />
@@ -109,8 +167,28 @@ const Home = () => {
                             className="border p-2 w-full mb-4 rounded-xs"
                         />
                         <div className="flex justify-end">
-                            <button onClick={() => setModalOpen(false)} className="mr-2 bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md cursor-pointer">Cancelar</button>
-                            <button onClick={handleSaveTask} className="bg-blue-600 hover:bg-blue-600 text-white px-4 py-2 rounded-md cursor-pointer">Salvar</button>
+                            <button 
+                                onClick={() => setModalOpen(false)} 
+                                className="
+                                    mr-2 
+                                    bg-gray-200 
+                                    hover:bg-gray-300 
+                                    px-4 
+                                    py-2 
+                                    rounded-md 
+                                    cursor-pointer
+                                ">Cancelar</button>
+                            <button 
+                                onClick={handleSaveTask} 
+                                className="
+                                    bg-blue-600 
+                                    hover:bg-blue-600 
+                                    text-white 
+                                    px-4 
+                                    py-2 
+                                    rounded-md 
+                                    cursor-pointer
+                                ">Salvar</button>
                         </div>
                     </div>
                 </div>
