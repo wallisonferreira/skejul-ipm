@@ -18,3 +18,14 @@ OBS: a Agenda de Tarefa deve conter ao menos: código identificador, título, de
 
 Referência
 https://www.youtube.com/watch?v=a_xWjbhkBkI
+
+# Comando de inicialização Back-end
+## php -S localhost:8000 -t public
+
+# Comando para o Front-end
+## Entrar em skejul-ipm\frontend\skejul-frontend
+## npm run dev
+
+Para o Front-end (ReactJs no-framwork):
+
+https://react.dev/learn/build-a-react-app-from-scratch
